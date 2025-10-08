@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+  --black: #000000;
+  --pink: #ff007f;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  text-transform: lowercase;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--black);
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--pink);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  min-height: 70vh;
+}
+
+.profile-img {
+  width: 40%;
+  max-width: 300px;
+  border-radius: 20px;
+}
+
+.intro {
+  width: 50%;
+}
+
+.intro h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.pink {
+  color: var(--pink);
+}
+
+.cv, .portfolio, .insta {
+  padding: 60px 10%;
+}
+
+.cv ul, .portfolio ul {
+  list-style: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-img {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  .intro {
+    width: 100%;
+  }
+  header {
+    flex-direction: column;
+  }
+}
